@@ -2,10 +2,10 @@
 **Run it in screen**
 
 ```
-screen -S cpanel_inatall
+# screen -S cpanel_inatall
 ```
 
 **Execute the below command to install the cPanel on CentOS_7**
 ```
-wget -O - http://dl.dropbox.com/u/11210438/flockonus-stack.sh | bash
+# wget -O - https://raw.githubusercontent.com/adarshgeorge/bash_script/master/Installations/cpanel_install_CentOS_7.sh |bash
 ```
