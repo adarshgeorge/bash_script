@@ -1,5 +1,5 @@
 
-**Run it in screen***
+**Run it in screen**
 
 ```
 screen -S cpanel_inatall
