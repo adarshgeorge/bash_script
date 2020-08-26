@@ -1,0 +1,4 @@
+echo "Hello $1 "
+echo "Welcome to DevOps!"
+echo "Have a Great Day Mr.$2 "
+echo "Bye $1 $2 $3"
