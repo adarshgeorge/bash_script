@@ -1,6 +1,7 @@
 #!/bin/bash
 
 #Checking the System Information
+echo " "
 echo "-------------------------"
 echo "|    Script Started     |"
 echo "-------------------------"
@@ -32,3 +33,4 @@ cat /proc/cpuinfo  |grep -i "cpu core"
 echo "-------------------------"
 echo "|      Completed        |"
 echo "-------------------------"
+echo " "
