@@ -1,8 +1,9 @@
 #!/bin/bash
 
 #Checking the System Information
-echo "================================================================================================="
-echo " "
+echo "-------------------------"
+echo "|    Script Started     |"
+echo "-------------------------"
 echo " "
 echo " "
 echo -e "\e[31mStatus: \e[0m"
@@ -28,4 +29,6 @@ echo -e "\e[31mCPU Info: \e[0m"
 echo " "
 cat /proc/cpuinfo  |grep -i "model name"
 cat /proc/cpuinfo  |grep -i "cpu core"
-echo " "
+echo "-------------------------"
+echo "|      Completed        |"
+echo "-------------------------"
