@@ -1,6 +1,7 @@
 #!/bin/bash
 
 #Checking the System Information
+wait 2s
 echo "================================================================================================="
 echo -e "\e[31mStatus: \e[0m"
 echo " "
