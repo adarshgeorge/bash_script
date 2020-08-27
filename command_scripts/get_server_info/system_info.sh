@@ -13,7 +13,7 @@ uptime
 echo " "
 echo -e "\e[31mOS Version: \e[0m"
 echo " "
-sudo cat /etc/os-release|grep -i name
+sudo cat /etc/os-release|grep -i pretty
 echo " "
 echo -e "\e[31mKernel Version: \e[0m"
 echo " "
