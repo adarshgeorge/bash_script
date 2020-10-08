@@ -5,7 +5,7 @@ iptables-save > ~/firewall.rules
 systemctl stop firewalld.service
 systemctl disable firewalld.service
 
-systemctl NetworkManager stop
+service NetworkManager stop
 systemctl disable NetworkManager 
 yum install curl -y
 yum install perl -y
