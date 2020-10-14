@@ -28,8 +28,8 @@ df -h
 echo  " "
 echo -e "\e[31mCPU Info: \e[0m"
 echo " "
-cat /proc/cpuinfo  |grep -i "model name"
-cat /proc/cpuinfo  |grep -i "cpu core"
+cat /proc/cpuinfo  |grep -i "model name"|tail -1
+cat /proc/cpuinfo  |grep -i "cpu core" |tail -1
 echo "-----------------------------------------------------"
 echo "--------------|    Script Completed   |--------------"
 echo "-----------------------------------------------------"
