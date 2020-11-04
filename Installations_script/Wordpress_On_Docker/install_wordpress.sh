@@ -1,7 +1,3 @@
-docker volume create myvol
-docker volume ls
-docker volume rm myvol
-docker volume inspect myvol
 docker network create --driver bridge wpnet
 docker volume create wordpress-vol
 docker volume create mysql-vol
