@@ -11,10 +11,11 @@ exit_stat=$?
 logging=`aws s3api get-bucket-logging --bucket $1 |jq -r '.LoggingEnabled' |jq -r '.TargetBucket'`
 transfer=`aws s3api get-bucket-accelerate-configuration --bucket $1 | jq -r '.Status'`
 location=`aws s3api get-bucket-location --bucket $1 | jq -r '.LocationConstraint'`
-public=`aws s3api get-public-access-block --bucket $1 | jq -r '.PublicAccessBlockConfiguration' | jq -r '.RestrictPublicBuckets'`
-
+#public=`aws s3api get-public-access-block --bucket $1 | jq -r '.PublicAccessBlockConfiguration' | jq -r '.RestrictPublicBuckets' > /dev/null 2>&1`
+aws s3api get-public-access-block --bucket $1 > /dev/null 2>&1
+public_exit=$?
 #Bucket Details
-echo -e "\e[31mDisk Usage: \e[0m"
+echo -e "\e[31m---------------------------- \e[0m"
 
 echo "Bucket Name: $1 "
 echo "Bucket Region: $location"
@@ -69,10 +70,14 @@ fi
 
 #Public Access 
 
+if [ $public_exit == 0 ] ;then
 
-if [ "$public" == "true" ]
-then
-	echo "Public access : $d1"
-else
+
 	echo "Public access : $e1"
+   
+elif [ $public_exit == 255 ];then
+	echo "Public access = $d1"
+else
+        echo "Public access = Unknown"
 fi
+
